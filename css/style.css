@@ -1,0 +1,287 @@
+/* 运动场馆信息中心 - 公共样式 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: #f5f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+/* ========== 顶部导航 ========== */
+.site-header {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.2s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ========== 主容器 ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1565c0;
+}
+
+/* ========== 统计卡片 ========== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  flex-shrink: 0;
+}
+
+.stat-info .num {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1565c0;
+}
+
+.stat-info .label {
+  font-size: 13px;
+  color: #78909c;
+}
+
+/* ========== 场馆卡片 ========== */
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.venue-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s, box-shadow 0.15s;
+  border-left: 4px solid #1e88e5;
+}
+
+.venue-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.venue-card .card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.venue-card .card-icon {
+  font-size: 32px;
+}
+
+.venue-card .card-name {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.venue-card .card-type {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.venue-card .card-desc {
+  font-size: 13px;
+  color: #607d8b;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.venue-card .card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: #546e7a;
+  margin-top: 10px;
+}
+
+.venue-card .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-open { color: #43a047; font-weight: 600; }
+.status-closed { color: #e53935; font-weight: 600; }
+
+/* ========== 筛选栏 ========== */
+.filter-bar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #1e88e5;
+}
+
+.filter-bar input { flex: 1; min-width: 180px; }
+
+/* ========== 空数据提示 ========== */
+.empty-tip {
+  text-align: center;
+  padding: 60px 20px;
+  color: #90a4ae;
+  font-size: 15px;
+}
+
+/* ========== 图表容器 ========== */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.chart-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.chart-box h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #37474f;
+}
+
+/* ========== 3D 容器 ========== */
+#three-container {
+  width: 100%;
+  height: 500px;
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ========== 页脚 ========== */
+.site-footer {
+  text-align: center;
+  padding: 24px 20px;
+  color: #90a4ae;
+  font-size: 13px;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .header-inner { flex-wrap: wrap; }
+  .logo { font-size: 18px; }
+  .nav-links { width: 100%; overflow-x: auto; }
+  .nav-links a { padding: 6px 12px; font-size: 13px; white-space: nowrap; }
+  .page-title { font-size: 20px; }
+  .stat-icon { width: 48px; height: 48px; font-size: 24px; }
+  .stat-info .num { font-size: 22px; }
+  .chart-grid { grid-template-columns: 1fr; }
+}
